@@ -34,6 +34,7 @@ resource "aws_db_instance" "rds" {
     backup_window               = "${lookup(var.rds, "${terraform.env}.backup_window", var.rds["default.backup_window"])}"
     apply_immediately           = "${lookup(var.rds, "${terraform.env}.apply_immediately", var.rds["default.apply_immediately"])}"
     auto_minor_version_upgrade  = "${lookup(var.rds, "${terraform.env}.auto_minor_version_upgrade", var.rds["default.auto_minor_version_upgrade"])}"
+    skip_final_snapshot         = "${lookup(var.rds, "${terraform.env}.skip_final_snapshot", var.rds["default.skip_final_snapshot"])}"
 }
 
 # SecurityGroup
