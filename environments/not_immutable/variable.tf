@@ -37,6 +37,7 @@ variable "rds" {
         default.backup_window                   = "19:00-19:30"
         default.apply_immediately               = "true"
         default.auto_minor_version_upgrade      = false
+        default.skip_final_snapshot             = "true"
         default.family                          = "postgres9.6"
     }
 }
